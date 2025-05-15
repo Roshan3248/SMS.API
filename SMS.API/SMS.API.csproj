@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\SMS.Infrastructure\SMS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.API", "SMS.API\SMS.API.csproj", "{A33C7BB9-ADB7-45CA-8EB6-FB31CA9F7736}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.API", "SMS.API\SMS.API.csproj", "{A33C7BB9-ADB7-45CA-8EB6-FB31CA9F7736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Domain", "SMS.Domain\SMS.Domain.csproj", "{4DC0BAA3-E555-4B75-A065-BFDFF86B77FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Domain", "SMS.Domain\SMS.Domain.csproj", "{4DC0BAA3-E555-4B75-A065-BFDFF86B77FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Application", "SMS.Application\SMS.Application.csproj", "{809B0CA9-411E-4581-8E77-FAF462542867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Application", "SMS.Application\SMS.Application.csproj", "{809B0CA9-411E-4581-8E77-FAF462542867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMS.Infrastructure", "SMS.Infrastructure\SMS.Infrastructure.csproj", "{87918FC9-B768-4F16-81A2-44C0D4C20DBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMS.Infrastructure", "SMS.Infrastructure\SMS.Infrastructure.csproj", "{87918FC9-B768-4F16-81A2-44C0D4C20DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
