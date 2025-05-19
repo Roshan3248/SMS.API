@@ -5,7 +5,7 @@
 namespace SMS.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Sta : Migration
+    public partial class Adduser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +24,21 @@ namespace SMS.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Districts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CountryId = table.Column<int>(type: "int", nullable: false),
+                    StateId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Districts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "States",
                 columns: table => new
                 {
@@ -35,6 +50,21 @@ namespace SMS.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_States", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Users",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Users", x => x.Id);
+                });
         }
 
         /// <inheritdoc />
@@ -44,7 +74,13 @@ namespace SMS.Infrastructure.Migrations
                 name: "Countries");
 
             migrationBuilder.DropTable(
+                name: "Districts");
+
+            migrationBuilder.DropTable(
                 name: "States");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

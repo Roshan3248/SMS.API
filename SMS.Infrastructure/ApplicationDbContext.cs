@@ -14,5 +14,7 @@ namespace SMS.Infrastructure
         public DbSet<State> States { get; set; }
         
         public DbSet<District> Districts { get; set; }
+
+        public DbSet<User>  Users { get; set; }
     }
 }
