@@ -13,6 +13,6 @@ namespace SMS.Domain.Interfaces
 
         bool Add(User user);
 
-        
+        User Login(string username, string password);
     }
 }

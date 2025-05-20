@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SMS.Domain.Entities;
@@ -26,5 +27,10 @@ namespace SMS.API.Controllers
             return Ok(_user.Add(user));
         }
 
+        [HttpPost("Login")]
+        public IActionResult Login(LoginRequest login) 
+        {
+            return Ok(_user.Login(login.Email, login.Password));
+        }
     }
 }

@@ -27,5 +27,11 @@ namespace SMS.Infrastructure.Repository
         {
             return _context.Users.ToList();
         }
+
+        public User Login(string email, string password)
+        {
+            return _context.Users.FirstOrDefault(x=>x.Email==email && x.Password==password);
+
+        }
     }
 }
