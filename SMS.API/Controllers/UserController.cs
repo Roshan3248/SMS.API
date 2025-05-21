@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using SMS.API.DTO;
 using SMS.Domain.Entities;
 using SMS.Domain.Interfaces;
 
@@ -30,7 +28,26 @@ namespace SMS.API.Controllers
         [HttpPost("Login")]
         public IActionResult Login(LoginRequest login) 
         {
-            return Ok(_user.Login(login.Email, login.Password));
+            var userdata = _user.Login(login.Email, login.Password);
+            if (userdata == null)
+            {
+                return Ok(new { Token = "", user = "", statuscode = 404, role = "" });
+            }
+            else 
+            {
+
+                //fetch data from userroles table
+                //fetch role data
+                //if(role == null)
+                //return Ok(new { Token = "", user = "", statuscode = 401, role = "" });
+                //else
+                //generate token token
+                //return Ok(new { token = "fdglkjljkgfdgfg", user = userdata, statuscode = 200, role = role });
+            }
+
+
+
+            return Ok();
         }
     }
 }

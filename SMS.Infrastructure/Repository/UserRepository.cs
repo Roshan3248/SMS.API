@@ -30,8 +30,7 @@ namespace SMS.Infrastructure.Repository
 
         public User Login(string email, string password)
         {
-            return _context.Users.FirstOrDefault(x=>x.Email==email && x.Password==password);
-
+            return _context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);
         }
     }
 }
