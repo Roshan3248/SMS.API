@@ -16,7 +16,7 @@ namespace SMS.API.Controllers
         [HttpGet("GetAllRoles")]
         public IActionResult GetAllRoles() 
         {
-            return Ok(_role.GetAll);
+            return Ok(_role.GetAll());
         }
         [HttpPost("AddRole")]
         public IActionResult AddRole(Role role)

@@ -17,7 +17,7 @@ namespace SMS.API.Controllers
         [HttpGet("GetAllUserRoles")]
         public IActionResult GetAllUserRoles()
         {
-            return Ok(_userrole.GetAll);
+            return Ok(_userrole.GetAll());
         }
     }
 }
