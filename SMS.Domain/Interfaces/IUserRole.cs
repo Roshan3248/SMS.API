@@ -12,6 +12,8 @@ namespace SMS.Domain.Interfaces
     {
         List<UserRole> GetAll();
 
-        bool Add(UserRole userrole);
+        bool Add(UserRole userRole);
+
+        UserRole GetById(int Id);
     }
 }

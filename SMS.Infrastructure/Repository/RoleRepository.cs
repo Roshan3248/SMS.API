@@ -24,6 +24,9 @@ namespace SMS.Infrastructure.Repository
             return _contex.Roles.ToList();
         }
 
-        
+        public Role GetById(int Id)
+        {
+            return _contex.Roles.Find(Id);
+        }
     }
 }

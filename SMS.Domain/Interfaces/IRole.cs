@@ -12,5 +12,7 @@ namespace SMS.Domain.Interfaces
         List<Role> GetAll();
 
         bool Add(Role role);
+
+        Role GetById(int Id);
     }
 }

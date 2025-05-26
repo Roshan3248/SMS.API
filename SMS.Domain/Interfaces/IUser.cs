@@ -13,6 +13,7 @@ namespace SMS.Domain.Interfaces
 
         bool Add(User user);
 
+        User GetById(int Id);
         User Login(string username, string password);
     }
 }

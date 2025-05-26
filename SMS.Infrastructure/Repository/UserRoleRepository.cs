@@ -17,9 +17,9 @@ namespace SMS.Infrastructure.Repository
             _context = context;
         }
 
-        public bool Add(UserRole userrole)
+        public bool Add(UserRole userRole)
         {
-            _context.UserRoles.Add(userrole);
+            _context.UserRoles.Add(userRole);
             _context.SaveChanges();
             return true;
         }
@@ -27,6 +27,11 @@ namespace SMS.Infrastructure.Repository
         public List<UserRole> GetAll()
         {
             return _context.UserRoles.ToList();
+        }
+
+        public UserRole GetById(int Id)
+        {
+            return _context.UserRoles.Find(Id);
         }
     }
 }

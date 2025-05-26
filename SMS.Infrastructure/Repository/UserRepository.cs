@@ -23,6 +23,11 @@ namespace SMS.Infrastructure.Repository
             return _context.Users.ToList();
         }
 
+        public User GetById(int Id)
+        {
+            return _context.Users.Find(Id);
+        }
+
         public User Login(string email, string password)
         {
             return _context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);
